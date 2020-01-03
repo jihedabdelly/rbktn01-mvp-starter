@@ -11,12 +11,13 @@ db.once('open', function() {
   console.log('mongoose connected successfully');
 });
 
-var itemSchema = mongoose.Schema({
-  quantity: Number,
-  description: String
+var userSchema = mongoose.Schema({
+  name: String,
+  email: String,
+  password: String
 });
 
-var Item = mongoose.model('Item', itemSchema);
+var User = mongoose.model('User', userSchema);
 
 var selectAll = function(callback) {
   Item.find({}, function(err, items) {
