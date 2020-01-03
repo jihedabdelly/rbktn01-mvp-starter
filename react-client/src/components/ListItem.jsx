@@ -6,8 +6,8 @@ const ListItem = (props) => (
 
   //   { props.item.description }
   // </div>
-  <div>
-  <form>
+
+  <form action="/" method="post">
     <label>
       UserName:
       <input type="text" name="name" placeholder="Enter your name" required/>
@@ -23,7 +23,7 @@ const ListItem = (props) => (
 
     <input type="submit" value="Enter" />
   </form>
-  </div>
+
 )
 
 export default ListItem;
