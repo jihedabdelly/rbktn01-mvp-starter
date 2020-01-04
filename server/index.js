@@ -23,6 +23,8 @@ app.post('/input', (req, res) => {
   var newEmail = req.body.email;
   var newPass = req.body.password;
   console.log("INPUT NAME",newName)
+
+  console.log("INPUT EMAIL",newEmail)
   // input.save()
   //   .then(item => {
   //     res.send("item saved to database");
