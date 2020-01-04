@@ -7,28 +7,28 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: []
+
     }
   }
 
-  componentDidMount() {
-    $.ajax({
-      url: '/items',
-      success: (data) => {
-        this.setState({
-          items: data
-        })
-      },
-      error: (err) => {
-        console.log('err', err);
-      }
-    });
-  }
+  // componentDidMount() {
+  //   $.ajax({
+  //     url: '/items',
+  //     success: (data) => {
+  //       this.setState({
+  //         items: data
+  //       })
+  //     },
+  //     error: (err) => {
+  //       console.log('err', err);
+  //     }
+  //   });
+  // }
 
   render () {
     return (<div>
-      {console.log("State??",this.state)}
-      <List items={this.state.items}/>
+
+      <List />
     </div>)
   }
 }

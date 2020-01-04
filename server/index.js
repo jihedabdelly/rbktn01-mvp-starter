@@ -18,16 +18,21 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 
 var User = items.User
 
-app.post('/', (req, res) => {
-  var input = new User(req.body);
-  console.log("INPUUUT",input)
-  input.save()
-    .then(item => {
-      res.send("item saved to database");
-    })
-    .catch(err => {
-      res.status(400).send("unable to save to database");
-    });
+app.post('/input', (req, res) => {
+  var newName = req.body.name;
+  var newEmail = req.body.email;
+  var newPass = req.body.password;
+  console.log("INPUUUT",newInput)
+  // input.save()
+  //   .then(item => {
+  //     res.send("item saved to database");
+  //   })
+  //   .catch(err => {
+  //     res.status(400).send("unable to save to database");
+  //   });
+
+  var db = new items.User
+
 })
 
 // app.get('/items', function (req, res) {
