@@ -47,6 +47,10 @@ render() {
         Password:
         <input type="password" name="password" placeholder="Enter your password" required/>
       </label><br/><br/>
+      <label>
+        Password Again:
+        <input type="password" name="password" placeholder="Enter your password again" required/>
+      </label><br/><br/>
 
       <input type="submit" value="Enter" />
     </form>
